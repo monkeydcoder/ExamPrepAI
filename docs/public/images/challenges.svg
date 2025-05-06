@@ -1,0 +1,60 @@
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="400" fill="#2d2d2d" rx="10" ry="10" />
+  
+  <!-- Title -->
+  <text x="400" y="50" font-family="Arial, sans-serif" font-size="24" fill="#ffffff" text-anchor="middle" font-weight="bold">Development Challenges</text>
+  
+  <!-- Timeline -->
+  <line x1="400" y1="90" x2="400" y2="350" stroke="#444444" stroke-width="4" />
+  
+  <!-- Stage 1: AI Integration -->
+  <circle cx="400" cy="120" r="20" fill="#00d1ff" />
+  <text x="400" cy="125" font-family="Arial, sans-serif" font-size="12" fill="#000000" text-anchor="middle" font-weight="bold">1</text>
+  
+  <rect x="430" y="100" width="200" height="40" fill="#1e1e1e" rx="5" ry="5" stroke="#444444" stroke-width="2" />
+  <text x="445" y="125" font-family="Arial, sans-serif" font-size="14" fill="#ffffff">AI Model Integration</text>
+  
+  <rect x="170" y="100" width="200" height="40" fill="#1e1e1e" rx="5" ry="5" stroke="#444444" stroke-width="2" />
+  <text x="185" y="120" font-family="Arial, sans-serif" font-size="12" fill="#b0b0b0">Challenge: Integrating Ollama</text>
+  <text x="185" y="135" font-family="Arial, sans-serif" font-size="12" fill="#00d1ff">Solution: Custom adapter pattern</text>
+  
+  <!-- Stage 2: Performance -->
+  <circle cx="400" cy="180" r="20" fill="#00d1ff" />
+  <text x="400" cy="185" font-family="Arial, sans-serif" font-size="12" fill="#000000" text-anchor="middle" font-weight="bold">2</text>
+  
+  <rect x="170" y="160" width="200" height="40" fill="#1e1e1e" rx="5" ry="5" stroke="#444444" stroke-width="2" />
+  <text x="185" y="180" font-family="Arial, sans-serif" font-size="14" fill="#ffffff">Performance Optimization</text>
+  
+  <rect x="430" y="160" width="200" height="40" fill="#1e1e1e" rx="5" ry="5" stroke="#444444" stroke-width="2" />
+  <text x="445" y="180" font-family="Arial, sans-serif" font-size="12" fill="#b0b0b0">Challenge: Slow response times</text>
+  <text x="445" y="195" font-family="Arial, sans-serif" font-size="12" fill="#00d1ff">Solution: Queue-based processing</text>
+  
+  <!-- Stage 3: Resource Management -->
+  <circle cx="400" cy="240" r="20" fill="#00d1ff" />
+  <text x="400" cy="245" font-family="Arial, sans-serif" font-size="12" fill="#000000" text-anchor="middle" font-weight="bold">3</text>
+  
+  <rect x="430" y="220" width="200" height="40" fill="#1e1e1e" rx="5" ry="5" stroke="#444444" stroke-width="2" />
+  <text x="445" y="240" font-family="Arial, sans-serif" font-size="14" fill="#ffffff">Resource Management</text>
+  
+  <rect x="170" y="220" width="200" height="40" fill="#1e1e1e" rx="5" ry="5" stroke="#444444" stroke-width="2" />
+  <text x="185" y="240" font-family="Arial, sans-serif" font-size="12" fill="#b0b0b0">Challenge: High memory usage</text>
+  <text x="185" y="255" font-family="Arial, sans-serif" font-size="12" fill="#00d1ff">Solution: Resource throttling</text>
+  
+  <!-- Stage 4: UI Design -->
+  <circle cx="400" cy="300" r="20" fill="#00d1ff" />
+  <text x="400" cy="305" font-family="Arial, sans-serif" font-size="12" fill="#000000" text-anchor="middle" font-weight="bold">4</text>
+  
+  <rect x="170" y="280" width="200" height="40" fill="#1e1e1e" rx="5" ry="5" stroke="#444444" stroke-width="2" />
+  <text x="185" y="300" font-family="Arial, sans-serif" font-size="14" fill="#ffffff">User Interface Design</text>
+  
+  <rect x="430" y="280" width="200" height="40" fill="#1e1e1e" rx="5" ry="5" stroke="#444444" stroke-width="2" />
+  <text x="445" y="300" font-family="Arial, sans-serif" font-size="12" fill="#b0b0b0">Challenge: Complex features</text>
+  <text x="445" y="315" font-family="Arial, sans-serif" font-size="12" fill="#00d1ff">Solution: Progressive disclosure</text>
+  
+  <!-- Decorative Elements -->
+  <circle cx="100" cy="350" r="40" fill="none" stroke="#00d1ff" stroke-width="2" opacity="0.3" />
+  <circle cx="700" cy="350" r="40" fill="none" stroke="#9b59b6" stroke-width="2" opacity="0.3" />
+  <circle cx="700" cy="50" r="25" fill="none" stroke="#00d1ff" stroke-width="2" opacity="0.3" />
+  <circle cx="100" cy="50" r="25" fill="none" stroke="#9b59b6" stroke-width="2" opacity="0.3" />
+</svg> 

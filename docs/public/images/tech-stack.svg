@@ -1,0 +1,71 @@
+<svg width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="400" fill="#2d2d2d" rx="10" ry="10" />
+  
+  <!-- Title -->
+  <text x="400" y="50" font-family="Arial, sans-serif" font-size="24" fill="#ffffff" text-anchor="middle" font-weight="bold">Technology Stack</text>
+  
+  <!-- Frontend Section -->
+  <rect x="100" y="80" width="180" height="260" fill="#1e1e1e" rx="8" ry="8" stroke="#444444" stroke-width="2" />
+  <text x="190" y="110" font-family="Arial, sans-serif" font-size="16" fill="#00d1ff" text-anchor="middle" font-weight="bold">Frontend</text>
+  
+  <!-- Frontend Technologies -->
+  <circle cx="140" cy="150" r="25" fill="#333333" stroke="#444444" stroke-width="2" />
+  <text x="140" cy="155" font-family="Arial, sans-serif" font-size="14" fill="#61dafb" text-anchor="middle">React</text>
+  
+  <circle cx="200" cy="150" r="25" fill="#333333" stroke="#444444" stroke-width="2" />
+  <text x="200" cy="155" font-family="Arial, sans-serif" font-size="14" fill="#3178c6" text-anchor="middle">TS</text>
+  
+  <circle cx="140" cy="220" r="25" fill="#333333" stroke="#444444" stroke-width="2" />
+  <text x="140" cy="225" font-family="Arial, sans-serif" font-size="14" fill="#0081cb" text-anchor="middle">MUI</text>
+  
+  <circle cx="200" cy="220" r="25" fill="#333333" stroke="#444444" stroke-width="2" />
+  <text x="200" cy="225" font-family="Arial, sans-serif" font-size="14" fill="#bd34fe" text-anchor="middle">Vite</text>
+  
+  <circle cx="170" cy="290" r="25" fill="#333333" stroke="#444444" stroke-width="2" />
+  <text x="170" cy="295" font-family="Arial, sans-serif" font-size="14" fill="#c43bad" text-anchor="middle">Router</text>
+  
+  <!-- Backend Section -->
+  <rect x="310" y="80" width="180" height="260" fill="#1e1e1e" rx="8" ry="8" stroke="#444444" stroke-width="2" />
+  <text x="400" y="110" font-family="Arial, sans-serif" font-size="16" fill="#00d1ff" text-anchor="middle" font-weight="bold">Backend</text>
+  
+  <!-- Backend Technologies -->
+  <circle cx="350" cy="150" r="25" fill="#333333" stroke="#444444" stroke-width="2" />
+  <text x="350" cy="155" font-family="Arial, sans-serif" font-size="14" fill="#68a063" text-anchor="middle">Node</text>
+  
+  <circle cx="410" cy="150" r="25" fill="#333333" stroke="#444444" stroke-width="2" />
+  <text x="410" cy="155" font-family="Arial, sans-serif" font-size="14" fill="#ffffff" text-anchor="middle">Express</text>
+  
+  <circle cx="350" cy="220" r="25" fill="#333333" stroke="#444444" stroke-width="2" />
+  <text x="350" cy="225" font-family="Arial, sans-serif" font-size="14" fill="#ffffff" text-anchor="middle">REST</text>
+  
+  <circle cx="410" cy="220" r="25" fill="#333333" stroke="#444444" stroke-width="2" />
+  <text x="410" cy="225" font-family="Arial, sans-serif" font-size="12" fill="#fcef40" text-anchor="middle">Middleware</text>
+  
+  <circle cx="380" cy="290" r="25" fill="#333333" stroke="#444444" stroke-width="2" />
+  <text x="380" cy="295" font-family="Arial, sans-serif" font-size="14" fill="#ffffff" text-anchor="middle">API</text>
+  
+  <!-- AI Section -->
+  <rect x="520" y="80" width="180" height="260" fill="#1e1e1e" rx="8" ry="8" stroke="#444444" stroke-width="2" />
+  <text x="610" y="110" font-family="Arial, sans-serif" font-size="16" fill="#00d1ff" text-anchor="middle" font-weight="bold">AI Layer</text>
+  
+  <!-- AI Technologies -->
+  <circle cx="560" cy="150" r="25" fill="#333333" stroke="#444444" stroke-width="2" />
+  <text x="560" cy="155" font-family="Arial, sans-serif" font-size="14" fill="#00d1ff" text-anchor="middle">Ollama</text>
+  
+  <circle cx="620" cy="150" r="25" fill="#333333" stroke="#444444" stroke-width="2" />
+  <text x="620" cy="155" font-family="Arial, sans-serif" font-size="14" fill="#9b59b6" text-anchor="middle">LLM</text>
+  
+  <circle cx="560" cy="220" r="25" fill="#333333" stroke="#444444" stroke-width="2" />
+  <text x="560" cy="225" font-family="Arial, sans-serif" font-size="14" fill="#ffffff" text-anchor="middle">NLP</text>
+  
+  <circle cx="620" cy="220" r="25" fill="#333333" stroke="#444444" stroke-width="2" />
+  <text x="620" cy="225" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">llama3.1</text>
+  
+  <circle cx="590" cy="290" r="25" fill="#333333" stroke="#444444" stroke-width="2" />
+  <text x="590" cy="295" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">llama3.2</text>
+  
+  <!-- Connection Lines -->
+  <line x1="190" y1="220" x2="300" y2="220" stroke="#00d1ff" stroke-width="2" stroke-dasharray="5,5" />
+  <line x1="400" y1="220" x2="510" y2="220" stroke="#00d1ff" stroke-width="2" stroke-dasharray="5,5" />
+</svg> 
