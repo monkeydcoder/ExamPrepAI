@@ -5,17 +5,19 @@ import {
   Paper, 
   Grid, 
   Divider,
+  useTheme,
+  Card,
+  CardMedia
+} from '@mui/material';
+import {
   Timeline,
   TimelineItem,
   TimelineSeparator,
   TimelineConnector,
   TimelineContent,
   TimelineDot,
-  TimelineOppositeContent,
-  useTheme,
-  Card,
-  CardMedia
-} from '@mui/material';
+  TimelineOppositeContent
+} from '@mui/lab';
 import PageContainer from '../components/PageContainer';
 import CodeIcon from '@mui/icons-material/Code';
 import PsychologyIcon from '@mui/icons-material/Psychology';
