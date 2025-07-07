@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "==============================================="
-echo "Cleanup script for ExamPrepHub"
+echo "Cleanup script for EduMind AI"
 echo "==============================================="
 
 # Get the directory where this script is located

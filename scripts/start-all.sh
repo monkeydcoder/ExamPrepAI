@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Starting ExamPrepHub (All Components)..."
+echo "Starting EduMind AI (All Components)..."
 
 # Make scripts executable
 chmod +x "$(dirname "$0")/start-backend.sh"

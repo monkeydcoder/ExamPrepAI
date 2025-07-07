@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <style>
+    .logo-bg {
+      fill: #00d1ff;
+    }
+    .logo-text {
+      fill: #ffffff;
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+      font-size: 60px;
+    }
+    
+    @media (prefers-color-scheme: dark) {
+      .logo-bg {
+        fill: #00a8cc;
+      }
+    }
+  </style>
+  
+  <circle class="logo-bg" cx="50" cy="50" r="45" />
+  <text class="logo-text" x="50" y="68" text-anchor="middle">E</text>
+</svg> 

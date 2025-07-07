@@ -569,24 +569,53 @@ If you continue to experience issues, please contact support for assistance.`
     } 
     // For image-based questions
     else if (imageData) {
-      console.log("Processing image-based question");
+      console.log("Processing image-based question in shared logic");
 
-      // Basic validation for image data
-      if (!imageData.startsWith('data:image/')) {
-        return res.status(400).json({
-          error: 'Invalid image data',
-          message: 'The uploaded file is not a valid image. Please upload a JPG or PNG file.'
-        });
-      }
-      
-      // Currently, we do not have true VQA capabilities
-      // So we'll return a helpful message explaining the limitation
-      // In a production system, you would integrate with a VQA model or service
-      
-      console.log("Returning default response for image-based question");
-      
-      res.json({
-        text: `I can see you've uploaded an image, but I'm currently limited in my ability to analyze images directly. 
+      try {
+        // Basic validation for image data
+        if (!imageData.startsWith('data:image/')) {
+          return res.status(400).json({
+            error: 'Invalid image data',
+            message: 'The uploaded file is not a valid image. Please upload a JPG or PNG file.'
+          });
+        }
+        
+        // Extract image type and data
+        const matches = imageData.match(/^data:image\/([a-zA-Z]+);base64,(.+)$/);
+        if (!matches || matches.length !== 3) {
+          return res.status(400).json({
+            error: 'Invalid image format',
+            message: 'The image data is not in the expected format.'
+          });
+        }
+        
+        const imageType = matches[1];
+        const base64Data = matches[2];
+        const buffer = Buffer.from(base64Data, 'base64');
+        
+        // Ensure uploads directory exists
+        const uploadsDir = path.join(__dirname, 'uploads');
+        if (!fs.existsSync(uploadsDir)) {
+          fs.mkdirSync(uploadsDir, { recursive: true });
+        }
+        
+        // Generate a unique filename
+        const filename = `question_${Date.now()}.${imageType}`;
+        const filePath = path.join(uploadsDir, filename);
+        
+        // Save the image to disk
+        fs.writeFileSync(filePath, buffer);
+        console.log(`Image saved to ${filePath}`);
+        
+        // Generate the URL that can be used to access the image
+        const imageUrl = `/api/images/${filename}`;
+        
+        // Currently, we do not have true VQA capabilities
+        // But we return the image URL along with a helpful message
+        console.log("Returning default response for image-based question with image URL");
+        
+        return res.json({
+          text: `I can see you've uploaded an image, but I'm currently limited in my ability to analyze images directly. 
 
 To help you better, could you:
 
@@ -594,8 +623,16 @@ To help you better, could you:
 2. Provide more context about your question or problem
 3. Type out any text or equations from the image that you'd like me to help with
 
-Once you provide more details, I'll do my best to assist you with your question.`
-      });
+Once you provide more details, I'll do my best to assist you with your question.`,
+          imageUrl: imageUrl
+        });
+      } catch (error) {
+        console.error('Error processing image:', error.message);
+        return res.status(500).json({
+          error: 'Image processing failed',
+          message: 'Failed to process the uploaded image. Please try again.'
+        });
+      }
     }
   } catch (error) {
     console.error('Error in question answering:', error.message);
@@ -1046,7 +1083,7 @@ async function handleQuestionAnswering(req, res) {
     });
   }
   
-  // Forward to the dedicated endpoint logic
+  // Set questionText field for consistent handling
   if (questionText) {
     req.body.questionText = questionText;
   }
@@ -1149,13 +1186,51 @@ If you continue to experience issues, please contact support for assistance.`
     else if (imageData) {
       console.log("Processing image-based question in shared logic");
 
-      // Currently, we do not have true VQA capabilities
-      // So we'll return a helpful message
-      
-      console.log("Returning default response for image-based question");
-      
-      return res.json({
-        text: `I can see you've uploaded an image, but I'm currently limited in my ability to analyze images directly. 
+      try {
+        // Basic validation for image data
+        if (!imageData.startsWith('data:image/')) {
+          return res.status(400).json({
+            error: 'Invalid image data',
+            message: 'The uploaded file is not a valid image. Please upload a JPG or PNG file.'
+          });
+        }
+        
+        // Extract image type and data
+        const matches = imageData.match(/^data:image\/([a-zA-Z]+);base64,(.+)$/);
+        if (!matches || matches.length !== 3) {
+          return res.status(400).json({
+            error: 'Invalid image format',
+            message: 'The image data is not in the expected format.'
+          });
+        }
+        
+        const imageType = matches[1];
+        const base64Data = matches[2];
+        const buffer = Buffer.from(base64Data, 'base64');
+        
+        // Ensure uploads directory exists
+        const uploadsDir = path.join(__dirname, 'uploads');
+        if (!fs.existsSync(uploadsDir)) {
+          fs.mkdirSync(uploadsDir, { recursive: true });
+        }
+        
+        // Generate a unique filename
+        const filename = `question_${Date.now()}.${imageType}`;
+        const filePath = path.join(uploadsDir, filename);
+        
+        // Save the image to disk
+        fs.writeFileSync(filePath, buffer);
+        console.log(`Image saved to ${filePath}`);
+        
+        // Generate the URL that can be used to access the image
+        const imageUrl = `/api/images/${filename}`;
+        
+        // Currently, we do not have true VQA capabilities
+        // But we return the image URL along with a helpful message
+        console.log("Returning default response for image-based question with image URL");
+        
+        return res.json({
+          text: `I can see you've uploaded an image, but I'm currently limited in my ability to analyze images directly. 
 
 To help you better, could you:
 
@@ -1163,8 +1238,16 @@ To help you better, could you:
 2. Provide more context about your question or problem
 3. Type out any text or equations from the image that you'd like me to help with
 
-Once you provide more details, I'll do my best to assist you with your question.`
-      });
+Once you provide more details, I'll do my best to assist you with your question.`,
+          imageUrl: imageUrl
+        });
+      } catch (error) {
+        console.error('Error processing image:', error.message);
+        return res.status(500).json({
+          error: 'Image processing failed',
+          message: 'Failed to process the uploaded image. Please try again.'
+        });
+      }
     }
   } catch (error) {
     console.error('Error in question answering logic:', error.message);
@@ -1188,6 +1271,123 @@ app.use((err, req, res, next) => {
     error: 'Server Error',
     message: err.message || 'An unexpected error occurred',
   });
+});
+
+// Add an endpoint to serve uploaded images directly
+app.get('/api/images/:filename', (req, res) => {
+  try {
+    const { filename } = req.params;
+    
+    // Validate the filename to prevent directory traversal attacks
+    if (!filename || filename.includes('..') || filename.includes('/')) {
+      return res.status(400).json({
+        error: 'Invalid filename',
+        message: 'The requested filename is invalid.'
+      });
+    }
+    
+    // Path to the uploads directory
+    const uploadsDir = path.join(__dirname, 'uploads');
+    const filePath = path.join(uploadsDir, filename);
+    
+    // Check if the file exists
+    if (!fs.existsSync(filePath)) {
+      return res.status(404).json({
+        error: 'File not found',
+        message: 'The requested image does not exist.'
+      });
+    }
+    
+    // Determine the content type based on file extension
+    const ext = path.extname(filename).toLowerCase();
+    let contentType = 'application/octet-stream'; // Default
+    
+    if (ext === '.jpg' || ext === '.jpeg') {
+      contentType = 'image/jpeg';
+    } else if (ext === '.png') {
+      contentType = 'image/png';
+    } else if (ext === '.gif') {
+      contentType = 'image/gif';
+    } else if (ext === '.webp') {
+      contentType = 'image/webp';
+    }
+    
+    // Read and send the file
+    const fileContent = fs.readFileSync(filePath);
+    res.setHeader('Content-Type', contentType);
+    return res.send(fileContent);
+  } catch (error) {
+    console.error('Error serving image:', error.message);
+    return res.status(500).json({
+      error: 'Server Error',
+      message: 'Failed to serve the requested image.'
+    });
+  }
+});
+
+// Add a test endpoint for direct image uploads
+app.post('/api/test-image-upload', async (req, res) => {
+  try {
+    const { imageData } = req.body;
+    
+    if (!imageData) {
+      return res.status(400).json({
+        error: 'Missing image data',
+        message: 'Please provide image data.'
+      });
+    }
+    
+    // Basic validation for image data
+    if (!imageData.startsWith('data:image/')) {
+      return res.status(400).json({
+        error: 'Invalid image data',
+        message: 'The uploaded file is not a valid image. Please upload a JPG or PNG file.'
+      });
+    }
+    
+    // Extract image type and data
+    const matches = imageData.match(/^data:image\/([a-zA-Z]+);base64,(.+)$/);
+    if (!matches || matches.length !== 3) {
+      return res.status(400).json({
+        error: 'Invalid image format',
+        message: 'The image data is not in the expected format.'
+      });
+    }
+    
+    const imageType = matches[1];
+    const base64Data = matches[2];
+    const buffer = Buffer.from(base64Data, 'base64');
+    
+    // Ensure uploads directory exists
+    const uploadsDir = path.join(__dirname, 'uploads');
+    if (!fs.existsSync(uploadsDir)) {
+      fs.mkdirSync(uploadsDir, { recursive: true });
+    }
+    
+    // Generate a unique filename
+    const filename = `test_${Date.now()}.${imageType}`;
+    const filePath = path.join(uploadsDir, filename);
+    
+    // Save the image to disk
+    fs.writeFileSync(filePath, buffer);
+    console.log(`Test image saved to ${filePath}`);
+    
+    // Generate the URL that can be used to access the image
+    const imageUrl = `/api/images/${filename}`;
+    
+    // Return success response with the image URL
+    res.json({ 
+      success: true, 
+      message: 'Image uploaded successfully',
+      imageUrl: imageUrl
+    });
+  } catch (error) {
+    console.error('Error in test image upload:', error.message);
+    res.status(500).json({ 
+      error: 'Image upload failed', 
+      message: "There was a problem uploading your image. Please try again later.",
+    });
+  }
 });
 
 // Start server

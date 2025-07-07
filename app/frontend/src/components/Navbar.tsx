@@ -93,7 +93,7 @@ const Navbar = () => {
       <Box sx={{ mb: 4, px: 2, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
         <DescriptionIcon sx={{ mr: 1, color: theme.palette.primary.main }} />
         <LogoText variant="h6">
-          ExamPrep Hub
+          EduMind AI
         </LogoText>
       </Box>
       <List sx={{ px: 1 }}>
@@ -225,7 +225,7 @@ const Navbar = () => {
                   to="/"
                   sx={{ fontSize: { xs: '1.25rem', sm: '1.5rem' } }}
                 >
-                  ExamPrep Hub
+                  EduMind AI
                 </LogoText>
               </Box>
             </Box>
@@ -244,7 +244,7 @@ const Navbar = () => {
                 to="/"
               >
                 <DescriptionIcon sx={{ mr: 1 }} />
-                ExamPrep Hub
+                EduMind AI
               </LogoText>
             </MotionBox>
 

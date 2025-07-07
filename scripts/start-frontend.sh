@@ -1,5 +1,5 @@
 #!/bin/bash
 
-echo "Starting ExamPrepHub Frontend Application..."
+echo "Starting EduMind AI Frontend Application..."
 cd "$(dirname "$0")/../app/frontend"
 npm run dev 

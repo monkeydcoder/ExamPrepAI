@@ -1,13 +1,13 @@
-# ExamPrepHub - AI-Powered Government Exam Preparation Platform
+# EduMind AI - AI-Powered Government Exam Preparation Platform
 
-ExamPrepHub is an AI-powered platform designed to help users prepare for government exams with advanced tools for practice tests, essay evaluation, and personalized learning paths.
+EduMind AI is an AI-powered platform designed to help users prepare for government exams with advanced tools for practice tests, essay evaluation, and personalized learning paths.
 
 ## Project Structure
 
 The project is organized into the following directories:
 
 ```
-ExamPrepHub/
+EduMind AI/
 ├── app/                    # Main application code
 │   ├── backend/            # Backend server (Node.js)
 │   └── frontend/           # Frontend application (React/Vite)
@@ -26,8 +26,8 @@ ExamPrepHub/
 
 The project consists of two main applications:
 
-1. **ExamPrepHub Platform** - An AI-powered exam preparation platform
-2. **ExamPrepHub Documentation** - A documentation website for the platform
+1. **EduMind AI Platform** - An AI-powered exam preparation platform
+2. **EduMind AI Documentation** - A documentation website for the platform
 
 ## Prerequisites
 
@@ -54,7 +54,7 @@ This will start:
 
 ## Running Individual Components
 
-### 1. Running the Main ExamPrepHub Platform
+### 1. Running the Main EduMind AI Platform
 
 #### Start the Backend:
 

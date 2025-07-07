@@ -71,12 +71,12 @@ const Challenges = () => {
   return (
     <PageContainer
       title="Challenges & Solutions"
-      subtitle="Key challenges faced during the development of ExamPrepHub and how they were addressed"
+      subtitle="Key challenges faced during the development of EduMind AI and how they were addressed"
       breadcrumbs={[{ label: 'Challenges', link: '/challenges' }]}
     >
       <Box sx={{ mb: 6 }}>
         <Typography variant="body1" paragraph>
-          Developing ExamPrepHub involved overcoming various technical and design challenges. This page documents the significant hurdles faced during development and the innovative solutions implemented to address them.
+          Developing EduMind AI involved overcoming various technical and design challenges. This page documents the significant hurdles faced during development and the innovative solutions implemented to address them.
         </Typography>
         
         <Card sx={{ my: 4 }}>

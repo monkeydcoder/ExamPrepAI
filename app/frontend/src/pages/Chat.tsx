@@ -383,7 +383,7 @@ const Chat = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: '0',
-      content: "👋 Hello! I'm your Government exam preparation assistant. I can help you with study strategies, exam patterns, answer writing techniques, and more for various competitive exams including UPSC, SSC, Banking, Railways, and State PSCs. How can I assist you today?\n\n**Tips:**\n- Use Fast Mode for quicker responses\n- Keep questions specific for better answers\n- Try the sample questions below to get started",
+      content: "👋 Hello! I'm EduMind AI, your government exam preparation assistant. I can help you with study strategies, exam patterns, answer writing techniques, and more for various competitive exams including UPSC, SSC, Banking, Railways, and State PSCs. How can I assist you today?\n\n**Tips:**\n- Use Fast Mode for quicker responses\n- Keep questions specific for better answers\n- Try the sample questions below to get started",
       role: 'assistant',
       timestamp: new Date(),
     },
@@ -539,7 +539,7 @@ const Chat = () => {
     setMessages([
       {
         id: '0',
-        content: "👋 Hello! I'm your Government exam preparation assistant. I can help you with study strategies, exam patterns, answer writing techniques, and more for various competitive exams including UPSC, SSC, Banking, Railways, and State PSCs. How can I assist you today?\n\n**Tips:**\n- Use Fast Mode for quicker responses\n- Keep questions specific for better answers\n- Try the sample questions below to get started",
+        content: "👋 Hello! I'm EduMind AI, your government exam preparation assistant. I can help you with study strategies, exam patterns, answer writing techniques, and more for various competitive exams including UPSC, SSC, Banking, Railways, and State PSCs. How can I assist you today?\n\n**Tips:**\n- Use Fast Mode for quicker responses\n- Keep questions specific for better answers\n- Try the sample questions below to get started",
         role: 'assistant',
         timestamp: new Date(),
       },
@@ -700,7 +700,7 @@ const Chat = () => {
   const handleClearChat = () => {
     const welcomeMessage = {
       id: '0',
-      content: "👋 Hello! I'm your Government exam preparation assistant. I can help you with study strategies, exam patterns, answer writing techniques, and more for various competitive exams including UPSC, SSC, Banking, Railways, and State PSCs. How can I assist you today?",
+      content: "👋 Hello! I'm EduMind AI, your government exam preparation assistant. I can help you with study strategies, exam patterns, answer writing techniques, and more for various competitive exams including UPSC, SSC, Banking, Railways, and State PSCs. How can I assist you today?\n\n**Tips:**\n- Use Fast Mode for quicker responses\n- Keep questions specific for better answers\n- Try the sample questions below to get started",
       role: 'assistant',
       timestamp: new Date(),
     };

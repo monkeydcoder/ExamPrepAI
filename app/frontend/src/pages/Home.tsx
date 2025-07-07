@@ -113,7 +113,7 @@ const Home = () => {
             }}
             variants={itemVariants}
           >
-            Welcome to ExamPrep Hub
+            Welcome to EduMind AI
           </MotionTypography>
 
           <MotionTypography 
