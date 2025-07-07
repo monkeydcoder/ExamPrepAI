@@ -8,6 +8,8 @@ EduMind AI is an AI-powered platform designed to help users prepare for governme
 
 [![Watch the project walkthrough on Loom](https://cdn.loom.com/sessions/thumbnails/e604337fc4cf4cd2932a9fc64e80a56c-with-play.gif)](https://www.loom.com/share/e604337fc4cf4cd2932a9fc64e80a56c?sid=a4ce65c0-40a6-4ba3-b9f2-ef4266a568a6)
 
+**▶️ [Click here to watch the full demo video on Loom](https://www.loom.com/share/e604337fc4cf4cd2932a9fc64e80a56c?sid=a4ce65c0-40a6-4ba3-b9f2-ef4266a568a6)**
+
 ---
 
 ## Project Structure
