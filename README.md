@@ -2,6 +2,14 @@
 
 EduMind AI is an AI-powered platform designed to help users prepare for government exams with advanced tools for practice tests, essay evaluation, and personalized learning paths.
 
+---
+
+## 🎥 Project Demo
+
+[![Watch the project walkthrough on Loom](https://cdn.loom.com/sessions/thumbnails/e604337fc4cf4cd2932a9fc64e80a56c-with-play.gif)](https://www.loom.com/share/e604337fc4cf4cd2932a9fc64e80a56c?sid=a4ce65c0-40a6-4ba3-b9f2-ef4266a568a6)
+
+---
+
 ## Project Structure
 
 The project is organized into the following directories:
@@ -105,11 +113,13 @@ The documentation website will run on http://localhost:8080
 - Multiple AI Models (llama3.1, llama3.2)
 - Real-time responses with proper markdown formatting
 - Dark/Light Theme support
+- **Pattern Analysis**: Get instant help with study strategies and exam pattern analysis
+- **Markdown Support**: Properly formatted responses with bold, lists, and code blocks for better readability
 
 ### Essay Evaluation
 - Text-based essay evaluation with detailed feedback
 - Image upload for handwritten essay evaluation
-- Comprehensive analysis of writing skills
+- Comprehensive analysis of writing skills (content, structure, language, formatting)
 - Progress tracking with real-time indicators
 
 ### Practice & Learning
@@ -117,6 +127,25 @@ The documentation website will run on http://localhost:8080
 - Personalized learning paths
 - Mock exams with authentic questions
 - Performance analytics and progress tracking
+
+### User Experience
+- Intuitive, easy-to-navigate interface
+- Fast loading times and responsive interactions
+- Optimized for performance, even on lower-end devices or slow networks
+
+### Technical Features
+- Comprehensive error handling with user-friendly error messages
+- Response caching to improve performance and reduce API calls
+- Real-time input validation to ensure data quality and prevent errors
+- Efficient API integration with rate limiting and request batching
+- Browser compatibility and progressive enhancement (core features work even with limited browser capabilities)
+
+### Accessibility
+- Full keyboard navigation for all interactive elements
+- Screen reader support with ARIA attributes and semantic HTML
+- High color contrast for readability and WCAG compliance
+- Support for browser text scaling and zoom
+- Inclusive design: multiple ways to interact, reduced cognitive load, and regular accessibility testing
 
 ## Technologies
 
